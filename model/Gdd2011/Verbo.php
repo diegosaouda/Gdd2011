@@ -2,13 +2,15 @@
 
 namespace Gdd2011;
 
+use Gdd2011\Googlon;
+
 class Verbo extends Googlon 
 {
 
-    const TIPO_VERBO_PRIMEIRA_PESSOA = 'primeira_pessoa';
+	const TIPO_VERBO_PRIMEIRA_PESSOA = 'primeira_pessoa';
 	const TIPO_VERBO_TODOS = 'todos';
 
-    /**
+	/**
 	 * @param array Verbos Existentes
 	 */
 	private $verbosPermitidos = array(

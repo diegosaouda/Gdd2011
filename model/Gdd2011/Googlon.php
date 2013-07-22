@@ -5,14 +5,14 @@ namespace Gdd2011;
 abstract class Googlon  
 {
 	
-   /**
-    * @var string Texto que é manipulado
-    */
+	/**
+	 * @var string Texto que é manipulado
+	 */
 	protected $texto;
 	
 	/**
-    * @var array Texto em array, dividido em palavras
-    */
+	 * @var array Texto em array, dividido em palavras
+	 */
 	protected $palavras;
 	
 	/**

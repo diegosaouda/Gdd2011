@@ -1,35 +1,42 @@
 <?php
+
 require_once('../vendor/autoload.php');
 
 require_once('../model/Gdd2011/Googlon.php');
 require_once('../model/Gdd2011/Verbo.php');
 
-class VerboTest extends PHPUnit_Framework_TestCase
+require_once('../App.php');
+
+class VerboTest extends PHPUnit_Framework_TestCase 
 {
-    
-    public function getTextoA()
-    {
-        return file_get_contents('../data/textoA.txt');
-    }
-    
-    public function getTextoB()
-    {
-        return file_get_contents('../data/textoB.txt');
-    }
-    
-    
-    public function testCountVerboTextoA()
-    {
-        $verbo = new Gdd2011\Verbo($this->getTextoA());
-        $this->assertEquals(26, $verbo->countVerbos());
-        $this->assertEquals(23, $verbo->countVerbosPrimeiraPessoa());
-    }
-    
-    public function testCountVerboTextoB()
-    {
-        $verbo = new Gdd2011\Verbo($this->getTextoB());
-        $this->assertEquals(30, $verbo->countVerbos());
-        $this->assertEquals(25, $verbo->countVerbosPrimeiraPessoa());
-    }
-    
+	
+	private $verboA;
+	private $verboB;
+	
+	public function setUp()
+	{
+		$this->verboA = new Gdd2011\Verbo(App::getTextoA());
+		$this->verboB = new Gdd2011\Verbo(App::getTextoB());
+	}
+	
+	public function testCountVerboTextoA() 
+	{
+		$this->assertEquals(26, $this->verboA->countVerbos());		
+	}
+	
+	public function testCountVerboPrimeiraPessoaTextoA()
+	{
+		$this->assertEquals(23, $this->verboA->countVerbosPrimeiraPessoa());
+	}
+
+	public function testCountVerboTextoB() 
+	{
+		$this->assertEquals(30, $this->verboB->countVerbos());
+	}
+	
+	public function testCountVerboPrimeiraPessoaTextoB()
+	{
+		$this->assertEquals(25, $this->verboB->countVerbosPrimeiraPessoa());
+	}
+
 }

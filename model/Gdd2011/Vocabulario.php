@@ -2,10 +2,12 @@
 
 namespace Gdd2011;
 
+use Gdd2011\Googlon;
+
 class Vocabulario extends Googlon 
 {
 
-    /**
+	/**
 	 * Retorna texto ordenado
 	 * @param string $texto
 	 * @return string texto ordenado
@@ -59,12 +61,7 @@ class Vocabulario extends Googlon
 		$tamanhoPalavra1 = strlen($palavra1);
 		$tamanhoPalavra2 = strlen($palavra2);
 		
-		$menorTamanho = $tamanhoPalavra2;
-		if ( ($tamanhoPalavra1 - $tamanhoPalavra2) < 0) {
-			$menorTamanho = $tamanhoPalavra1;
-		}
-		
-		return $menorTamanho;
+		return ($tamanhoPalavra1 <= $tamanhoPalavra2) ? $tamanhoPalavra1 : $tamanhoPalavra2;
 	}
 	
 }

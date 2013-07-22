@@ -2,13 +2,15 @@
 
 namespace Gdd2011;
 
+use Gdd2011\Googlon;
+
 class Preposicao extends Googlon 
 {
     
     const LETRA_NAO_PREPOSICAO = 'd';
     
 
-    /**
+	/**
 	 * Contagem Preposições
 	 * @param string $texto
 	 * @param return int Total de preposições
@@ -26,7 +28,7 @@ class Preposicao extends Googlon
 		return $count_preposicoes;		
 	}
 
-    /**
+	/**
 	 * Verifica se a palavra é um preposição
 	 * @param string $palavra
 	 * @return bool

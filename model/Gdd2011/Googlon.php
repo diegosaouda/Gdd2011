@@ -37,7 +37,7 @@ abstract class Googlon
 	);
 	
 	
-	public function __construct($texto)
+	public function __construct($texto = '')
 	{
 	    if (!is_string($texto)) {
 	        throw new Exception('Não é um texto Válido');

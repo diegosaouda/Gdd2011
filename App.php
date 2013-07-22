@@ -4,11 +4,11 @@ use Gdd2011\Preposicao;
 use Gdd2011\Verbo;
 use Gdd2011\Vocabulario;
 
-class App {
+class App 
+{
 
 	private $textoA;
 	private $textoB;
-	
 
 	public function __construct() 
 	{
@@ -19,7 +19,7 @@ class App {
 	public function run() 
 	{
 		echo "<pre>";
-		
+
 		$this->autoload()
 				->preposicao()
 				->Verbo()
@@ -31,7 +31,7 @@ class App {
 		$preposicaoA = new Preposicao($this->textoA);
 		$preposicaoB = new Preposicao($this->textoB);
 
-		
+
 		echo "\nPreposições texto A: " . ($preposicaoA->countPreposicoes());
 		echo "\nPreposições texto B: " . ($preposicaoB->countPreposicoes());
 
@@ -77,25 +77,25 @@ class App {
 
 		return $this;
 	}
-	
-	public static function getTextoA()
-    {
-        return file_get_contents(__DIR__ . '/data/textoA.txt');
-    }
-    
-    public static function getTextoAOrdenado()
-    {
-        return file_get_contents(__DIR__ . '/data/textoAOrdenado.txt');
-    }
-    
-    public static function getTextoB()
-    {
-        return file_get_contents(__DIR__ . '/data/textoB.txt');
-    }
-    
-    public static function getTextoBOrdenado()
-    {
-        return file_get_contents(__DIR__ . '/data/textoBOrdenado.txt');
-    }
+
+	public static function getTextoA() 
+	{
+		return file_get_contents(__DIR__ . '/data/textoA.txt');
+	}
+
+	public static function getTextoAOrdenado() 
+	{
+		return file_get_contents(__DIR__ . '/data/textoAOrdenado.txt');
+	}
+
+	public static function getTextoB() 
+	{
+		return file_get_contents(__DIR__ . '/data/textoB.txt');
+	}
+
+	public static function getTextoBOrdenado() 
+	{
+		return file_get_contents(__DIR__ . '/data/textoBOrdenado.txt');
+	}
 
 }

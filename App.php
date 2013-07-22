@@ -31,9 +31,10 @@ class App
 		$preposicaoA = new Preposicao($this->textoA);
 		$preposicaoB = new Preposicao($this->textoB);
 
-
-		echo "\nPreposições texto A: " . ($preposicaoA->countPreposicoes());
-		echo "\nPreposições texto B: " . ($preposicaoB->countPreposicoes());
+		echo "\nPreposições";
+		echo "\n";
+		echo "\ntexto A: " . ($preposicaoA->countPreposicoes());
+		echo "\ntexto B: " . ($preposicaoB->countPreposicoes());
 
 		return $this;
 	}
@@ -43,13 +44,15 @@ class App
 		$verboA = new Verbo($this->textoA);
 		$verboB = new Verbo($this->textoB);
 
+		echo "\n\n\nVerbos";
+		
 		echo "\n";
-		echo "\nVerbo texto A: " . ($verboA->countVerbos());
-		echo "\nVerbo primeira pessoa texto A: " . ($verboA->countVerbosPrimeiraPessoa());
+		echo "\ntexto A: " . ($verboA->countVerbos());
+		echo "\nprimeira pessoa texto A: " . ($verboA->countVerbosPrimeiraPessoa());
 
 		echo "\n";
-		echo "\nVerbo texto B: " . ($verboB->countVerbos());
-		echo "\nVerbo primeira pessoa texto B: " . ($verboB->countVerbosPrimeiraPessoa());
+		echo "\ntexto B: " . ($verboB->countVerbos());
+		echo "\nprimeira pessoa texto B: " . ($verboB->countVerbosPrimeiraPessoa());
 
 		return $this;
 	}
@@ -58,7 +61,9 @@ class App
 	{
 		$vocabularioA = new Vocabulario($this->textoA);
 		$vocabularioB = new Vocabulario($this->textoB);
-
+		
+		echo "\n\n\nVocabulário";
+		
 		echo "\n";
 		echo "\nOrdem Texto A: " . ($vocabularioA->ordenarTexto());
 

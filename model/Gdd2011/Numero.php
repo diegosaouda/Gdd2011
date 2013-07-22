@@ -12,37 +12,37 @@ class Numero extends Googlon
 	
 	public function base20($palavra)
 	{
-		$numero = 0;
+		$numero = 0.0;
 		
-		for ($i=0 ; $i< strlen($palavra) ; $i++) {
+		for ($i=0 ; $i < strlen($palavra) ; $i++) {
 			$letra = substr($palavra, $i, 1);
 			
 			$numero +=  pow(self::BASE, $i) * $this->letraPeso[$letra];
 		}
 		
-		return $numero;
+		return doubleval($numero);
 	}
 	
 	
 	public function countNumerosBonito()
 	{
-		$numeroBonitoTotal = 0;
+		$numeroBonitoTotal = array();
 		
 		foreach ($this->palavras as $palavra) {
 			
 			$numero = $this->base20($palavra);
 			if (!$this->isNumeroBonito($numero)) continue;
 			
-			$numeroBonitoTotal++;
+			$numeroBonitoTotal[$numero] = $numero;
 		}
 		
-		return $numeroBonitoTotal;
+		return count($numeroBonitoTotal);
 	}
 	
 	
 	private function isNumeroBonito($numero)
 	{	
-		return ($numero >= self::NUMERO_BONITO_MAIOR_IGUAL && ($numero % 3) == 0);
+		return ($numero >= self::NUMERO_BONITO_MAIOR_IGUAL && ($numero % self::NUMERO_BONITO_DIVISIVEL) == 0);
 	}
     
 }

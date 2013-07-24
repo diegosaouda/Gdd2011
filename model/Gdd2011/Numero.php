@@ -42,7 +42,8 @@ class Numero extends Googlon
 	
 	private function isNumeroBonito($numero)
 	{	
-		return ($numero >= self::NUMERO_BONITO_MAIOR_IGUAL && ($numero % self::NUMERO_BONITO_DIVISIVEL) == 0);
+		$resto = (int) fmod($numero, self::NUMERO_BONITO_DIVISIVEL);
+		return ( ($numero >= self::NUMERO_BONITO_MAIOR_IGUAL) && ($resto === 0) );
 	}
     
 }

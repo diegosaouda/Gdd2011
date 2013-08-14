@@ -26,9 +26,9 @@ class Vocabulario extends Googlon
 	 * @param string $palavra1
 	 * @param string $palavra2
 	 * @return int 
-	 *		0 => iguais
-	 *		1 => palavra1 maior que palavra2
-	 *		2 => palavra1 menor que palavra2 
+	 *		 0 => iguais
+	 *		 1 => palavra1 maior que palavra2
+	 *		-1 => palavra1 menor que palavra2 
 	 */
 	protected function ordenar($palavra1, $palavra2)
 	{	

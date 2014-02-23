@@ -6,7 +6,7 @@ use Gdd2011\Googlon;
 
 class Preposicao extends Googlon 
 {
-    
+    /**@const string*/
 	const LETRA_NAO_PREPOSICAO = 'd';
     
 

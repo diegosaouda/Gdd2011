@@ -2,6 +2,8 @@
 
 namespace Gdd2011;
 
+use InvalidArgumentException;
+
 abstract class Googlon  
 {
 	
@@ -30,7 +32,7 @@ abstract class Googlon
 	 * @var array Peso de cada letra
 	 */
 	protected $letraPeso = array(
-		'k' => 0,  'b' => 1,  'w' => 2,  'r' =>  3, 'q' =>  4, 'd' =>  5,
+	    'k' => 0,  'b' => 1,  'w' => 2,  'r' =>  3, 'q' =>  4, 'd' =>  5,
 		'n' => 6,  'f' => 7,  'x' => 8,  'j' =>  9, 'm' => 10, 'l' => 11,
 		'v' => 12, 'h' => 13, 't' => 14, 'c' => 15, 'g' => 16, 'z' => 17,
 		'p' => 18, 's' => 19
@@ -39,8 +41,8 @@ abstract class Googlon
 	
 	public function __construct($texto = '')
 	{
-	    if (!is_string($texto)) {
-	        throw new Exception('Não é um texto Válido');
+	    if (! is_string($texto)) {
+	        throw new InvalidArgumentException('Não é um texto Válido');
 	    }
 	    
 	    $this->texto = $texto;

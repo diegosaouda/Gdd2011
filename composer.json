@@ -1,9 +1,14 @@
 {
-	"require": {
-		"phpunit/phpunit": "3.7.*"
-	},
-	"config": {
-		"bin-dir": "/usr/local/bin/"
-	}
+    "name": "dsaouda/Gdd2011",
+    "description": "Teste Google GDD2011",
+    "autoload": {
+            "psr-0": {"": "src/"}
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master",
+        "phpunit/phpunit": "3.7.*"
+    }
 }
-

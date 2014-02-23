@@ -8,12 +8,14 @@ abstract class Googlon
 {
 	
 	/**
-	 * @var string Texto que é manipulado
+	 * Texto que é manipulado
+	 * @var string
 	 */
 	protected $texto;
 	
 	/**
-	 * @var array Texto em array, dividido em palavras
+	 * Texto em array, dividido em palavras
+	 * @var array
 	 */
 	protected $palavras;
 	
@@ -24,12 +26,14 @@ abstract class Googlon
 	
 	/**
 	 * Não é usado, só está aqui, como consulta
-	 * @var array letras bar são letras que não está em foo
+	 * letras bar são letras que não está em foo
+	 * @var array
 	 */
 	protected $bar = array();
 	
 	/**
-	 * @var array Peso de cada letra
+	 * Peso de cada letra
+	 * @var array
 	 */
 	protected $letraPeso = array(
 	    'k' => 0,  'b' => 1,  'w' => 2,  'r' =>  3, 'q' =>  4, 'd' =>  5,

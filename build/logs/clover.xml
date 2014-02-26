@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1393156766">
-  <project timestamp="1393156766">
+<coverage generated="1393408571">
+  <project timestamp="1393408571">
     <package name="Gdd2011">
       <file name="/home/dsaouda/Gdd2011/src/Gdd2011/Googlon.php">
         <class name="Googlon" namespace="Gdd2011">
           <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="6" coveredelements="5"/>
         </class>
-        <line num="42" type="method" name="__construct" crap="2.03" count="11"/>
-        <line num="44" type="stmt" count="11"/>
-        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="method" name="__construct" crap="2.03" count="11"/>
         <line num="48" type="stmt" count="11"/>
-        <line num="49" type="stmt" count="11"/>
-        <line num="50" type="stmt" count="11"/>
-        <metrics loc="51" ncloc="35" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="6" coveredelements="4"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="11"/>
+        <line num="53" type="stmt" count="11"/>
+        <line num="54" type="stmt" count="11"/>
+        <metrics loc="55" ncloc="35" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="6" coveredelements="4"/>
       </file>
       <file name="/home/dsaouda/Gdd2011/src/Gdd2011/Numero.php">
         <class name="Numero" namespace="Gdd2011">
@@ -312,6 +312,6 @@
       <line num="57" type="stmt" count="0"/>
       <metrics loc="57" ncloc="55" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="0" elements="32" coveredelements="0"/>
     </file>
-    <metrics files="7" loc="734" ncloc="513" classes="7" methods="32" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="228" coveredstatements="90" elements="260" coveredelements="102"/>
+    <metrics files="7" loc="738" ncloc="513" classes="7" methods="32" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="228" coveredstatements="90" elements="260" coveredelements="102"/>
   </project>
 </coverage>

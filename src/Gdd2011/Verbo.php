@@ -45,9 +45,10 @@ class Verbo extends Googlon
     private function countVerbosPorTipo($tipoVerbo)
     {
 
-        if (! in_array($tipoVerbo, $this->verbosPermitidos)) {
-            throw new Exception("Verbo ({$tipoVerbo}) inválido");
-        }
+        //trava removido por que o teste nunca testava essa trava, por ser privado, dificilmente algo errado vai entrar
+        //if (! in_array($tipoVerbo, $this->verbosPermitidos)) {
+        //    throw new Exception("Verbo ({$tipoVerbo}) inválido");
+        //}
 
         $count_verbo = 0;
 

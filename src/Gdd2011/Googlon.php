@@ -29,8 +29,8 @@ abstract class Googlon
     protected $foo = array('s', 'l', 'f', 'w', 'k');
 
     /**
-     * Não é usado, só está aqui, como consulta
-     * letras bar são letras que não está em foo
+     * Não é usado, só está aqui como consulta,
+     * letras bar são letras que não estão em foo
      * @var array
      */
     protected $bar = array();
@@ -55,5 +55,4 @@ abstract class Googlon
         $this->texto = $texto;
         $this->palavras = explode(' ', $texto);
     }
-
 }

@@ -4,6 +4,7 @@ namespace Gdd2011;
 
 class Preposicao extends Googlon
 {
+
     /**@const string*/
     const LETRA_NAO_PREPOSICAO = 'd';
 
@@ -14,15 +15,17 @@ class Preposicao extends Googlon
      */
     public function countPreposicoes()
     {
-        $count_preposicoes = 0;
+        $countPreposicoes = 0;
 
         foreach ($this->palavras as $palavra) {
-            if (! $this->isPreposicao($palavra)) continue;
+            if (! $this->isPreposicao($palavra)) {
+                continue;
+            }
 
-            $count_preposicoes++;
+            $countPreposicoes++;
         }
 
-        return $count_preposicoes;
+        return $countPreposicoes;
     }
 
     /**
@@ -36,12 +39,11 @@ class Preposicao extends Googlon
             return false;
         }
 
-        $ultima_letra = (substr($palavra,-1));
-        if (in_array($ultima_letra, $this->foo)) {
+        $ultimaLetra = (substr($palavra, -1));
+        if (in_array($ultimaLetra, $this->foo)) {
             return false;
         }
 
         return true;
     }
-
 }

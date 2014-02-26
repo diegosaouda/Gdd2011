@@ -12,7 +12,7 @@ class Numero extends Googlon
     {
         $numero = 0.0;
 
-        for ($i=0 ; $i < strlen($palavra) ; $i++) {
+        for ($i = 0; $i < strlen($palavra); $i++) {
             $letra = substr($palavra, $i, 1);
 
             $numero +=  pow(self::BASE, $i) * $this->letraPeso[$letra];
@@ -28,7 +28,9 @@ class Numero extends Googlon
         foreach ($this->palavras as $palavra) {
 
             $numero = $this->base20($palavra);
-            if (!$this->isNumeroBonito($numero)) continue;
+            if (! $this->isNumeroBonito($numero)) {
+                continue;
+            }
 
             $numeroBonitoTotal[$numero] = $numero;
         }
@@ -40,7 +42,6 @@ class Numero extends Googlon
     {
         $resto = (int) fmod($numero, self::NUMERO_BONITO_DIVISIVEL);
 
-        return ( ($numero >= self::NUMERO_BONITO_MAIOR_IGUAL) && ($resto === 0) );
+        return (($numero >= self::NUMERO_BONITO_MAIOR_IGUAL) && ($resto === 0));
     }
-
 }

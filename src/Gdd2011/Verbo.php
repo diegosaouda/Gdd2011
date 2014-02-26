@@ -11,10 +11,10 @@ class Verbo extends Googlon
     /**
      * @param array Verbos Existentes
      */
-    private $verbosPermitidos = array(
-        self::TIPO_VERBO_PRIMEIRA_PESSOA,
-        self::TIPO_VERBO_TODOS
-    );
+//    private $verbosPermitidos = array(
+//        self::TIPO_VERBO_PRIMEIRA_PESSOA,
+//        self::TIPO_VERBO_TODOS
+//    );
 
     /**
      * Contagem de verbos em geral
@@ -50,22 +50,27 @@ class Verbo extends Googlon
         //    throw new Exception("Verbo ({$tipoVerbo}) inválido");
         //}
 
-        $count_verbo = 0;
+        $countVerbo = 0;
 
         foreach ($this->palavras as $palavra) {
 
-            if (!$this->isVerbo($palavra)) continue;
+            if (!$this->isVerbo($palavra)) {
+                continue;
+            }
 
             switch ($tipoVerbo) {
                 case self::TIPO_VERBO_PRIMEIRA_PESSOA:
-                    if (! $this->isVerboPrimeiraPessoa($palavra)) continue 2;
+                    if (! $this->isVerboPrimeiraPessoa($palavra)) {
+                        continue 2;
+                    }
+
                     break;
             }
 
-            $count_verbo++;
+            $countVerbo++;
         }
 
-        return $count_verbo;
+        return $countVerbo;
     }
 
     /**
@@ -75,9 +80,9 @@ class Verbo extends Googlon
      */
     private function isVerbo($palavra)
     {
-        $ultima_letra = substr($palavra, -1);
+        $ultimaLetra = substr($palavra, -1);
 
-        return ( strlen($palavra) >= 8 && in_array($ultima_letra, $this->foo) );
+        return ( strlen($palavra) >= 8 && in_array($ultimaLetra, $this->foo) );
     }
 
     /**
@@ -88,9 +93,8 @@ class Verbo extends Googlon
      */
     private function isVerboPrimeiraPessoa($palavra)
     {
-        $primeira_letra = substr($palavra, 0, 1);
+        $primeiraLetra = substr($palavra, 0, 1);
 
-        return (in_array($primeira_letra, $this->foo)) ? false : true;
+        return (in_array($primeiraLetra, $this->foo)) ? false : true;
     }
-
 }

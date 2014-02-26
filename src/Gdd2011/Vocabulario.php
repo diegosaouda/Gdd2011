@@ -7,7 +7,6 @@ class Vocabulario extends Googlon
 
     /**
      * Retorna texto ordenado
-     * @param  string $texto
      * @return string texto ordenado
      */
     public function ordenarTexto()
@@ -24,21 +23,21 @@ class Vocabulario extends Googlon
      * @param  string $palavra1
      * @param  string $palavra2
      * @return int
-     *                         0 => iguais
-     *                         1 => palavra1 maior que palavra2
-     *                         -1 => palavra1 menor que palavra2
+     *                         0 => iguais;
+     *                         1 => palavra1 maior que palavra2;
+     *                         -1 => palavra1 menor que palavra2;
      */
     protected function ordenar($palavra1, $palavra2)
     {
         $size = $this->getTamanhoMenorPalavra($palavra1, $palavra2);
 
         for ($i=0; $i < $size; $i++) {
-            $l1 = $palavra1[$i];
-            $l2 = $palavra2[$i];
+            $letra1 = $palavra1[$i];
+            $letra2 = $palavra2[$i];
 
-            if ($this->letraPeso[$l1] > $this->letraPeso[$l2]) {
+            if ($this->letraPeso[$letra1] > $this->letraPeso[$letra2]) {
                 return 1;
-            } elseif ($this->letraPeso[$l1] < $this->letraPeso[$l2]) {
+            } elseif ($this->letraPeso[$letra1] < $this->letraPeso[$letra2]) {
                 return -1;
             }
         }
@@ -61,5 +60,4 @@ class Vocabulario extends Googlon
 
         return ($tamanhoPalavra1 <= $tamanhoPalavra2) ? $tamanhoPalavra1 : $tamanhoPalavra2;
     }
-
 }

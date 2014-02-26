@@ -14,7 +14,6 @@
         <log type="junit" target="../build/logs/logfile.xml" logIncompleteSkipped="false"/>
         <log type="testdox-html" target="../build/logs/testdox.html"/>
         <log type="testdox-text" target="../build/logs/testdox.txt"/>
-        
     </logging>
     <filter>
        <blacklist>

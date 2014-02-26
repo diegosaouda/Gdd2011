@@ -1,6 +1,4 @@
-<phpunit
-    bootstrap="./bootstrap.php"
-    colors="true">
+<phpunit bootstrap="./bootstrap.php" colors="true">
     <testsuites>
         <testsuite name="Gdd2011">
             <directory>./tests/</directory>
@@ -9,4 +7,9 @@
     <logging>
         <log type="coverage-clover" target="../build/logs/clover.xml"/>
     </logging>
+    <filter>
+       <blacklist>
+            <directory suffix=".php">../vendor</directory>
+       </blacklist>
+    </filter>
 </phpunit>

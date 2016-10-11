@@ -21,9 +21,9 @@ class App
 		echo "<pre>";
 
 		$this->autoload()
-				->preposicao()
-				->Verbo()
-				->Vocabulario();
+			->preposicao()
+			->Verbo()
+			->Vocabulario();
 	}
 
 	protected function preposicao() 
